@@ -1,0 +1,97 @@
+.App,
+div,
+h3,
+ul,
+li,
+img,
+span,
+i {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0 none;
+}
+
+.App {
+  font-family: "Nunito Sans", sans-serif;
+  color: hsl(0, 0%, 100%);
+}
+
+.header,
+input,
+.card {
+  background-color: hsl(207, 26%, 25%);
+}
+
+input{
+  width:25%;
+  margin-top:3em;
+  margin-left: 5%;
+  padding:0.5rem;
+  border-radius: 0.3em;
+}
+
+/* HEADER STYLES */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 3rem;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+div.mode-selector {
+  font-weight: 300;
+  font-size: 0.5rem;
+}
+
+span.moon {
+  margin-right: 0.3rem;
+  font-size: 0.3rem;
+}
+
+/* MAIN CONTENT STYLES */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 2.5%;
+}
+.card {
+  display: flex;
+}
+
+.basic-card {
+  flex-flow: column nowrap;
+  width: 20%;
+  margin: 2.5%;
+  border-bottom-left-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem;
+}
+
+.basic-card .flag {
+  width: 100%;
+  height: 12.5vw;
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
+}
+
+.basic-card .country-name {
+  margin: 1rem 1rem 0.5rem;
+  font-size: 14px;
+}
+
+.basic-card .summary-info {
+  margin: 0rem 1rem 1.5rem;
+  list-style-type: none;
+  font-size: 12px;
+}
+
+.basic-card .summary-info .info-item {
+  margin-bottom: 0.25rem;
+}
