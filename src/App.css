@@ -19,17 +19,22 @@ i {
 
 .header,
 input,
+select,
 .card {
   background-color: hsl(207, 26%, 25%);
 }
 
-input{
-  width:25%;
-  margin-top:3em;
+input,select {
+  width: 25%;
+  margin-top: 3em;
   margin-left: 5%;
-  padding:0.5rem;
+  padding: 0.5rem;
   border-radius: 0.3em;
 }
+
+/* select{
+  width 
+} */
 
 /* HEADER STYLES */
 
@@ -42,17 +47,17 @@ input{
 
 .title {
   font-weight: 600;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
 }
 
 div.mode-selector {
   font-weight: 300;
-  font-size: 0.5rem;
+  font-size: 0.8rem;
 }
 
 span.moon {
   margin-right: 0.3rem;
-  font-size: 0.3rem;
+  font-size: 0.6rem;
 }
 
 /* MAIN CONTENT STYLES */
