@@ -6,20 +6,33 @@ import HomeView from "./HomePage";
 import CountryView from "./CountryPage";
 
 function App() {
+  // PREPARATIONS
   const [countryCode, setCountryCode] = useState("");
-  // const [view, setView] = useState("HOME");
+  const [mode, setMode] = useState("dark");
 
   const changeView = (code) => {
     setCountryCode(code);
   };
-  // PREPARATIONS
+
+  const changeColorMode = (colorMode) => {
+    setMode(colorMode);
+  };
+
   return (
-    <div class="App">
-      <Header />
+    <div className="App">
+      <Header handleClick={changeColorMode} colorMode={mode} />
       {!countryCode ? (
-        <HomeView countriesData={allCountries} handleClick={changeView} />
+        <HomeView
+          countriesData={allCountries}
+          handleClick={changeView}
+          colorMode={mode}
+        />
       ) : (
-        <CountryView code={countryCode} handleClick={changeView} />
+        <CountryView
+          code={countryCode}
+          handleClick={changeView}
+          colorMode={mode}
+        />
       )}
     </div>
   );

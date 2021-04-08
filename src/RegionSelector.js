@@ -26,7 +26,7 @@ const RegionSelector = (props) => {
   };
 
   return (
-    <div id="region-selector" className="selector">
+    <div id="region-selector" className={props.colorMode}>
       <div className={`option selected-option`} onClick={showHideOptions}>
         <span>{selectedRegion}</span>
         <span>

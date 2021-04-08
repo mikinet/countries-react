@@ -8,8 +8,8 @@ const DetailsCard = (props) => {
   } = props.countryData;
 
   return (
-    <div className="container country-details-container">
-      <Flag src={flag} alt={`${countryName} flag`}/>
+    <div id="country-card" className={`${props.colorMode} container country-details`}>
+      <Flag src={flag} alt={`${countryName} flag`} />
       <div className="country-info">
         <h3>{countryName}</h3>
         <div className="details">

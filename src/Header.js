@@ -1,12 +1,28 @@
-const Header = () => {
+import { useState } from "react";
+
+const Header = (props) => {
+  const [mode, setMode] = useState("Light");
+
+  const changeColorTheme = () => {
+    const colorTheme = props.colorMode;
+    if (colorTheme === "light") {
+      setMode("Light");
+      document.querySelector("body").className = "dark";
+      return props.handleClick("dark");
+    }
+    setMode("Dark");
+    document.querySelector("body").className = "light";
+    return props.handleClick("light");
+  };
+
   return (
-    <div className="header">
+    <div id="header" className={props.colorMode}>
       <h3 className="title">Where in the World?</h3>
-      <div class="mode-selector">
+      <div class="mode-selector" onClick={changeColorTheme}>
         <span className="moon">
           <i className="fas fa-moon"></i>
         </span>
-        <span>Dark Mode</span>
+        <span>{mode} Mode</span>
       </div>
     </div>
   );
