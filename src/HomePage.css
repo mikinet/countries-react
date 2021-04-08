@@ -1,0 +1,101 @@
+/* 
+* HOME PAGE STYLES 
+*/
+
+#search-bar {
+  float: left;
+  display: flex;
+  align-items: center;
+  width: 36vw;
+  border-radius: 0.3em;
+}
+
+#search-bar span,
+#search {
+  padding: 1rem;
+}
+
+#search-bar span {
+  padding-right: 0;
+}
+
+#search {
+  width: 33vw;
+  outline: none;
+}
+
+#region-selector {
+  float: right;
+}
+
+div.options-list {
+  display: flex;
+  flex-direction: column;
+}
+
+div.selected-option,
+div.options-list div {
+  width: 13.33vw;
+}
+
+div.selected-option {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.2em;
+  padding: 1rem;
+  border-radius: 0.3em;
+}
+
+div.options-list .option {
+  padding: 0.5em 1em 0;
+}
+
+div.options-list .option:first-child {
+  border-top-left-radius: 0.3em;
+  border-top-right-radius: 0.3em;
+}
+
+div.options-list .option:last-child {
+  padding-bottom: 1em;
+  border-bottom-left-radius: 0.3em;
+  border-bottom-right-radius: 0.3em;
+}
+
+div.options-list div.collapsed {
+  display: none;
+}
+
+div.options-list .expanded {
+  z-index: 99;
+}
+
+.basic-country-details {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 20.1%;
+  margin-bottom: 5vw;
+  border-bottom-left-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem;
+}
+
+.basic-country-details .flag {
+  width: 100%;
+  height: 12.5vw;
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
+}
+
+.basic-country-details .country-name {
+  margin: 1rem 1rem 0.5rem;
+}
+
+.basic-country-details .summary-info,
+.details-card .info-list {
+  margin: 0rem 1rem 1.5rem;
+  list-style-type: none;
+}
+
+.basic-country-details .summary-info .info-item,
+.details-card .info-list .info-item {
+  margin-bottom: 0.25rem;
+}

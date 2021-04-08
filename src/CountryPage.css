@@ -1,0 +1,48 @@
+/* 
+* COUNTRY DETAILS PAGE STYLES
+*/
+
+#btn-back {
+  width: 10vw;
+  padding: 1em;
+  font-size: 16px;
+  border-radius: 0.3em;
+}
+
+.country-details {
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.country-details img,
+.country-info {
+  width: 41.5vw;
+}
+
+.country-info {
+  padding: 2em 0;
+}
+
+.country-info div.details {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em 0 4em;
+}
+
+.country-info ul {
+  list-style-type: none;
+  width: 45%;
+}
+
+.country-info label,
+.country-info ul span.label {
+  font-weight: 600;
+}
+
+.country-info div button {
+  margin: 0.2em;
+  padding: 0.5em 1.5em;
+  font-size: 1em;
+  border-radius: 0.3em;
+  outline: none;
+}
