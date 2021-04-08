@@ -3,6 +3,7 @@ import allCountries from "./countriesAll.json";
 import CountryCard from "./BasicCard";
 import SearchBar from "./SearchBar";
 import RegionSelector from "./RegionSelector";
+import "./HomePage.css"
 
 function HomePage(props) {
   // PREPARATIONS
@@ -27,9 +28,17 @@ function HomePage(props) {
   const countriesList = filterCountries([...allCountries], searchValue, region);
 
   return (
-    <div className="main">
-      <SearchBar onInput={handleSearch} placeholder="Search for a country..." />
-      <RegionSelector regionNames={regions} onChange={handleRegionSelection} />
+    <div id= "main">
+      <SearchBar
+        onInput={handleSearch}
+        placeholder="Search for a country..."
+        colorMode={props.colorMode}
+      />
+      <RegionSelector
+        regionNames={regions}
+        onChange={handleRegionSelection}
+        colorMode={props.colorMode}
+      />
       <div className="container countries-container">
         {countriesList.map((country, index) => {
           const countryData = mapCountryData(country);
@@ -38,6 +47,7 @@ function HomePage(props) {
               key={index}
               data={countryData}
               onClick={props.handleClick}
+              colorMode={props.colorMode}
             />
           );
         })}

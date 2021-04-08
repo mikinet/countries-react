@@ -1,6 +1,7 @@
 import { useState } from "react";
 import allCountries from "./countriesAll.json";
 import DetailsCard from "./DetailsCard";
+import "./CountryPage.css";
 
 const CountryPage = (props) => {
   const [countryData, setCountryData] = useState(getCountryData(props.code));
@@ -14,11 +15,15 @@ const CountryPage = (props) => {
   };
 
   return (
-    <div className="main">
-      <button id="btn-back" className="" onClick={setCountryCode}>
+    <div id="main">
+      <button
+        id="btn-back"
+        className={props.colorMode}
+        onClick={setCountryCode}
+      >
         &larr;&nbsp;&nbsp;Back
       </button>
-      <DetailsCard countryData={countryData} handleClick={setCountryCode} />
+      <DetailsCard countryData={countryData} handleClick={setCountryCode} colorMode={props.colorMode}/>
     </div>
   );
 };
