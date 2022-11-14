@@ -31,7 +31,6 @@ export const Flag = (props) => {
 };
 
 export const InfoList = ({ list }) => {
-  console.log(list);
   return (
     <ul className="info-list">
       {Object.keys(list).map((info, index) => {
